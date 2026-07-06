@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vinda, Júlia — G4 Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Fireworks Canvas -->
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <img src="logo-g4.png" alt="G4 Business" class="nav-logo-img" />
+      <span class="nav-title">Onboarding · CRM &amp; Lifecycle</span>
+      <a href="#cultura" class="btn-nav magnetic">Começar</a>
+    </div>
+  </nav>
+
+  <!-- ── 1. HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="dot-grid"></div>
+    <div class="hero-content">
+      <span class="hero-badge reveal-fade">CRM · Analista Pleno</span>
+      <h1 class="hero-headline">
+        <span class="hero-line-1 hero-split">Bem-vinda,</span>
+        <span class="hero-line-2 hero-split hero-name">Júlia.</span>
+      </h1>
+      <p class="hero-sub reveal-fade">Este é o seu mapa para as primeiras semanas no G4.<br>Do buddy Paulo, com muito prazer em ter você no time.</p>
+      <div class="hero-cta reveal-fade">
+        <a href="#cultura" class="btn-gold magnetic">Explorar onboarding</a>
+        <a href="#pessoas" class="btn-outline-gold">Conhecer o time →</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint reveal-fade">
+      <span>Role para explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── 2. CULTURA ── -->
+  <section class="section cultura-section" id="cultura">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">O jeito G4 de trabalhar</p>
+      <h2 class="section-headline split-text">Código de Cultura.</h2>
+      <p class="section-sub reveal-fade">10 princípios que guiam cada decisão, interação e entrega na empresa.</p>
+      <div class="bento-grid">
+        <div class="bento-card wide">
+          <span class="bento-num">01</span>
+          <h3>Empresa, time, indivíduo</h3>
+          <p>Priorize o coletivo. Construa playbooks. Seja protagonista. Faça o que precisa ser feito.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">02</span>
+          <h3>Foco radical no cliente</h3>
+          <p>Entenda a dor. Resolva. Supere expectativas. Sempre honre o combinado.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">03</span>
+          <h3>Liberdade com responsabilidade</h3>
+          <p>Você tem autonomia — e assume as consequências. Use para criar e resolver.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">04</span>
+          <h3>Meritocracia brutal</h3>
+          <p>Você cresce pelo resultado que gera. O "como" importa tanto quanto o "o quê".</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">05</span>
+          <h3>Verdade acima de tudo</h3>
+          <p>Fale o que precisa ser dito. Traga dados. Não maquie problemas.</p>
+        </div>
+        <div class="bento-card wide">
+          <span class="bento-num">06</span>
+          <h3>Confronto com embasamento</h3>
+          <p>Questione com fatos. Escute com humildade. Enfrente conflitos direto na fonte, com respeito. Saiba concordar em discordar.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">07</span>
+          <h3>Excelência como padrão</h3>
+          <p>Entregue mais do que esperam. Jogue para ganhar, não para participar.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">08</span>
+          <h3>Velocidade com precisão</h3>
+          <p>Execute com agilidade, sem perder rigor. Entregue o combinado antes do próximo.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">09</span>
+          <h3>Aprendizado contínuo</h3>
+          <p>Estude, aprenda, aplique. Todo dia. Tenha humildade intelectual.</p>
+        </div>
+        <div class="bento-card">
+          <span class="bento-num">10</span>
+          <h3>Sem atalhos viciosos</h3>
+          <p>Faça o que é certo, mesmo quando dá mais trabalho. Prefira excelência à aparência.</p>
+        </div>
+      </div>
+      <div class="cultura-warning reveal-fade">
+        <span class="warning-icon">⚡</span>
+        <p><strong>O que não toleramos:</strong> vitimismo, politicagem, não cumprir o combinado, fofocar por trás, colocar interesse pessoal acima da empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. ÁREA CLI ── -->
+  <section class="section cli-section" id="area">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Sua área</p>
+      <h2 class="section-headline split-text">CRM &amp; Lifecycle.</h2>
+      <div class="cli-mission reveal-fade">
+        <span class="mission-label">Missão</span>
+        <p>"Transformar a jornada do cliente numa máquina lucrativa de relacionamento duradouro — entregando o produto certo, para a pessoa certa, pelo canal certo, no momento certo."</p>
+      </div>
+      <div class="squads-grid">
+        <div class="squad-card reveal">
+          <div class="squad-icon">📣</div>
+          <h3>Squad Campanhas</h3>
+          <p>Operacionalizar comunicações pré e pós-venda. Nutrir, engajar, assistir e vender. Aumentar LTV da base.</p>
+          <div class="squad-kpis">
+            <span>MQLs</span><span>Leads</span><span>Receita</span><span>LTV</span>
+          </div>
+        </div>
+        <div class="squad-card reveal">
+          <div class="squad-icon">⚙️</div>
+          <h3>Squad Ops</h3>
+          <p>Garantir o funcionamento das ferramentas (HubSpot, Blip). Integridade das bases. Consumo saudável dos planos.</p>
+          <div class="squad-kpis">
+            <span>SLA</span><span>NPS</span><span>Eficiência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. FUNIL ── -->
+  <section class="section funil-section" id="funil">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Como a máquina funciona</p>
+      <h2 class="section-headline split-text">Funil Comercial do G4.</h2>
+      <p class="section-sub reveal-fade">Entender o funil é fundamental para qualquer trabalho de CRM.</p>
+      <div class="funil-wrapper">
+        <div class="funil-step" data-step="0">
+          <div class="funil-icon">🎯</div>
+          <div class="funil-label">MQL</div>
+          <div class="funil-desc">Lead dentro do ICP — cargo e faturamento dentro dos perfis A–K (acima de R$ 250k).</div>
+          <div class="funil-owner">Marketing</div>
+        </div>
+        <div class="funil-arrow">→</div>
+        <div class="funil-step" data-step="1">
+          <div class="funil-icon">✅</div>
+          <div class="funil-label">SAL</div>
+          <div class="funil-desc">MQL aceito pelo setor de Pré-Vendas para qualificação ativa.</div>
+          <div class="funil-owner">Pré-Vendas</div>
+        </div>
+        <div class="funil-arrow">→</div>
+        <div class="funil-step" data-step="2">
+          <div class="funil-icon">📅</div>
+          <div class="funil-label">OPP</div>
+          <div class="funil-desc">Pré-vendas agendou e o lead entrou na reunião com o vendedor.</div>
+          <div class="funil-owner">Vendas</div>
+        </div>
+        <div class="funil-arrow">→</div>
+        <div class="funil-step funil-won" data-step="3">
+          <div class="funil-icon">🏆</div>
+          <div class="funil-label">Won</div>
+          <div class="funil-desc">Venda fechada. O lead virou aluno da G4!</div>
+          <div class="funil-owner funil-owner-won">Vendas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. ICP ── -->
+  <section class="section icp-section" id="icp">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Quem você vai impactar</p>
+      <h2 class="section-headline split-text">Perfis de Lead — ICP.</h2>
+      <p class="section-sub reveal-fade">O G4 classifica leads por <strong>Cargo</strong> e <strong>Faturamento Anual</strong>. Perfis A–K (acima de R$ 250k) entram no pipeline. K abaixo de R$ 250k, L e M são fora do SLA.</p>
+      <div class="icp-table-wrap reveal">
+        <table class="icp-table">
+          <thead>
+            <tr><th>Perfil</th><th>Cargo</th><th>Faturamento Anual</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="icp-badge">A</span></td><td>Sócio ou Fundador</td><td>Acima de R$ 10 milhões</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">B</span></td><td>Presidente ou CEO</td><td>Acima de R$ 10 milhões</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">C</span></td><td>Sócio ou Fundador</td><td>R$ 1 mi – R$ 10 mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">D</span></td><td>Presidente ou CEO</td><td>R$ 1 mi – R$ 10 mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">E</span></td><td>Diretor</td><td>Acima de R$ 10 milhões</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">F</span></td><td>VP ou C-Level</td><td>Acima de R$ 10 milhões</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">G</span></td><td>Diretor</td><td>R$ 1 mi – R$ 10 mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">H</span></td><td>VP ou C-Level</td><td>R$ 1 mi – R$ 10 mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">I</span></td><td>Sócio ou Fundador</td><td>R$ 500k – R$ 1mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge">J</span></td><td>Gerente / Diretor, VP, C-Level</td><td>R$ 500k – R$ 1mi</td><td><span class="status-tag ok">Pipeline</span></td></tr>
+            <tr><td><span class="icp-badge tier2">K</span></td><td>Sócio, CEO, Diretor, VP, C-Level</td><td>R$ 250k – R$ 500k</td><td><span class="status-tag warn">Tier 2</span></td></tr>
+            <tr><td><span class="icp-badge out">K</span></td><td>Sócio, CEO, Diretor, VP, C-Level</td><td>Abaixo de R$ 250k</td><td><span class="status-tag out">Fora do SLA</span></td></tr>
+            <tr><td><span class="icp-badge out">L</span></td><td>Coordenador / Supervisor</td><td>Qualquer faturamento</td><td><span class="status-tag out">Fora do SLA</span></td></tr>
+            <tr><td><span class="icp-badge out">M</span></td><td>Analista</td><td>Até R$ 500k</td><td><span class="status-tag out">Fora do SLA</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. RITUAIS ── -->
+  <section class="section rituais-section" id="rituais">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Como o time se organiza</p>
+      <h2 class="section-headline split-text">Rituais da Área.</h2>
+      <p class="section-sub reveal-fade">O Guilherme veio de background de Project Manager. A área tem rituais bem estruturados.</p>
+      <div class="rituais-grid">
+        <div class="ritual-card reveal">
+          <div class="ritual-num">01</div>
+          <div class="ritual-icon">🗓️</div>
+          <h3>Planning</h3>
+          <p class="ritual-when">Toda semana · substitui a Daily</p>
+          <p>Abertura do ciclo semanal. O time alinha prioridades, projetos e entregas — quem faz o quê e qual o prazo. Quando tem Planning, não tem Daily naquele dia.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-num">02</div>
+          <div class="ritual-icon">☀️</div>
+          <h3>Daily</h3>
+          <p class="ritual-when">Dias sem Planning · normalmente de manhã</p>
+          <p>Check de 15 min: o que fiz ontem, o que farei hoje, tem bloqueio? Foco em visibilidade e desbloqueio rápido.</p>
+        </div>
+        <div class="ritual-card reveal">
+          <div class="ritual-num">03</div>
+          <div class="ritual-icon">📊</div>
+          <h3>Review</h3>
+          <p class="ritual-when">Toda semana · fechamento do ciclo</p>
+          <p>O time apresenta o que foi entregue, analisa resultados vs. meta e documenta aprendizados para o próximo ciclo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. FERRAMENTAS ── -->
+  <section class="section tools-section" id="ferramentas">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Stack da área</p>
+      <h2 class="section-headline split-text">Ferramentas.</h2>
+      <div class="tools-note reveal-fade">
+        <span>🔑</span>
+        <p>Primeiro passo: fala com a <strong>Caroline Fernandes</strong> para pegar os logins de todas as ferramentas.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="https://app.hubspot.com/login" target="_blank" class="tool-card reveal magnetic">
+          <span class="tool-emoji">📩</span>
+          <div>
+            <strong>HubSpot</strong>
+            <span>CRM principal — leads, automações, e-mail</span>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+        <a href="https://account.blip.ai/login" target="_blank" class="tool-card reveal magnetic">
+          <span class="tool-emoji">📲</span>
+          <div>
+            <strong>Blip</strong>
+            <span>WhatsApp — chatbot e disparos</span>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+        <a href="https://oauth.rebrandly.com/Account/Login" target="_blank" class="tool-card reveal magnetic">
+          <span class="tool-emoji">🔗</span>
+          <div>
+            <strong>Rebrandly</strong>
+            <span>Encurtador e rastreamento de links</span>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+        <a href="https://app.360nrs.com/" target="_blank" class="tool-card reveal magnetic">
+          <span class="tool-emoji">💬</span>
+          <div>
+            <strong>NRS360</strong>
+            <span>Disparos de SMS</span>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+        <a href="https://areadocliente.liguelead.app.br/login" target="_blank" class="tool-card reveal magnetic">
+          <span class="tool-emoji">📞</span>
+          <div>
+            <strong>Liguelead</strong>
+            <span>Ligações e SMS</span>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+        <div class="tool-card reveal">
+          <span class="tool-emoji">📓</span>
+          <div>
+            <strong>Notion</strong>
+            <span>Docs, tasks e processos</span>
+          </div>
+          <span class="tool-arrow tool-internal">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. PESSOAS ── -->
+  <section class="section pessoas-section" id="pessoas">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Primeiro contato</p>
+      <h2 class="section-headline split-text">Quem você precisa conhecer.</h2>
+
+      <div class="vcards-wrapper" id="vcardsScroll">
+        <div class="vcards-track" id="vcardsTrack">
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-guilherme.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Guilherme</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Guilherme Machado — Coordenador CRM / Lifecycle</strong>
+                Seu gestor direto. Referência máxima de CRM na área. Valoriza processo e documentação.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-lucas.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Lucas</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Lucas Nogueira (BH) — Gerente / Revenue Ops</strong>
+                Responsável pela área de CLI. Visão estratégica do time. Seu gestor indireto.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-caroline.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Caroline</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Caroline Fernandes — Analista Lifecycle & CRM</strong>
+                Par de time. Fala com ela primeiro para pegar logins e entender processos do dia a dia.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-raquel.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Raquel</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Raquel Bacellar — Analista Lifecycle & CRM</strong>
+                Par de time. Campanhas e CRM. Boa parceira para entender o fluxo operacional.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-vinicius.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Vinícius</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Vinícius Lima — Analista Marketing Ops</strong>
+                Ótimo contexto de CRM e operações de marketing. Referência técnica na área.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-higor.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Higor</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Higor Emanoel — Copywriter GTM</strong>
+                Faz as copys dos disparos de Go To Market. Você vai precisar muito dele para campanhas GTM.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-sarah.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Sarah</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Sarah Vitório — Copywriter BAU</strong>
+                Faz as copys dos disparos de BAU (Business as Usual). Parceira frequente do dia a dia.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-luisa.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Luisa</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Luisa — Especialista Web Design | Go To Market</strong>
+                Referência em design de LPs e peças do GTM. Parceira próxima para entregas visuais da área.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-dirceu.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Dirceu</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Dirceu Neto — Coordenador Go To Market</strong>
+                Lidera a operação de GTM. Contato próximo para campanhas e disparos de Go To Market.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-bruno.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Bruno</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Bruno Collares — Head de Go To Market</strong>
+                Responsável estratégico pela área de GTM. Visão macro das campanhas e iniciativas de Go To Market.
+              </p>
+            </div>
+          </div>
+
+          <div class="vcard">
+            <div class="vcard-visual vc-photo" style="background-image: url('foto-rai.png');">
+              <div class="vc-art">
+                <span class="vc-word-big">Raí</span>
+              </div>
+            </div>
+            <div class="vcard-body">
+              <p class="vcard-title">
+                <strong>Raí — Estagiário CRM</strong>
+                Par de time no dia a dia. Vai trabalhar junto com você nas operações de CRM.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="vcards-nav">
+        <button class="vcards-nav-btn" id="vcardsPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="vcards-nav-btn" id="vcardsNext" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 9. G4 OS ── -->
+  <section class="section g4os-section" id="g4os">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Sua IA no trabalho</p>
+      <h2 class="section-headline split-text">G4 OS.</h2>
+      <p class="section-sub reveal-fade">O sistema operacional de IA da G4 — conecta todas as ferramentas num só chat. Pense como seu Chief of Staff digital.</p>
+      <div class="g4os-steps">
+        <div class="g4os-step reveal">
+          <div class="step-num-circle">1</div>
+          <div class="step-body">
+            <strong>Download</strong>
+            <p>Acesse <a href="https://g4oscloud.com/download-public" target="_blank">g4oscloud.com/download-public</a> e baixe para o seu SO.</p>
+          </div>
+        </div>
+        <div class="g4os-step reveal">
+          <div class="step-num-circle">2</div>
+          <div class="step-body">
+            <strong>Instalar</strong>
+            <p>Execute o arquivo. Sem privilégios administrativos. Se aparecer tela azul do Windows: Mais informações → Executar mesmo assim.</p>
+          </div>
+        </div>
+        <div class="g4os-step reveal">
+          <div class="step-num-circle">3</div>
+          <div class="step-body">
+            <strong>Autenticar</strong>
+            <p>E-mail corporativo → código OTP de 6 dígitos → Verificar e continuar. Instalação leva 10–20 min.</p>
+          </div>
+        </div>
+        <div class="g4os-step reveal">
+          <div class="step-num-circle">4</div>
+          <div class="step-body">
+            <strong>Workspace Setup</strong>
+            <p>Ao logar, cai no chat de setup. Responda as perguntas para configurar seu ambiente.</p>
+          </div>
+        </div>
+        <div class="g4os-step reveal">
+          <div class="step-num-circle">5</div>
+          <div class="step-body">
+            <strong>Ativar fontes</strong>
+            <p>Clique no botão de fontes abaixo da caixa de texto. Ordem: Notion → Google Workspace → Slack.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 10. CARREIRA ── -->
+  <section class="section carreira-section" id="carreira">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Onde você está e para onde vai</p>
+      <h2 class="section-headline split-text">Pleno → Sênior.</h2>
+      <p class="section-sub reveal-fade">Entender onde você está na curva é o primeiro passo para crescer com intencionalidade.</p>
+
+      <!-- Nível atual -->
+      <div class="nivel-atual reveal-fade">
+        <div class="nivel-badge">
+          <span class="nivel-l">L2</span>
+          <div>
+            <strong>Você está aqui</strong>
+            <span>Analista Pleno · CRM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparativo -->
+      <div class="nivel-compare">
+        <div class="nivel-col reveal">
+          <div class="nivel-col-header">
+            <span class="nivel-tag">L2 — Pleno</span>
+            <p class="nivel-def">Resolvedor de <strong>problemas bem definidos</strong>. Pega o que existe e executa melhor, mais rápido, com mais qualidade.</p>
+          </div>
+          <div class="nivel-skills">
+            <p class="nivel-skills-title">People</p>
+            <div class="nivel-skill-list">
+              <span>Proatividade real</span>
+              <span>Comunicação assertiva</span>
+              <span>Colaboração com o time</span>
+              <span>Questiona com dados</span>
+              <span>Visão crítica</span>
+            </div>
+          </div>
+          <div class="nivel-skills">
+            <p class="nivel-skills-title">Hard</p>
+            <div class="nivel-skill-list">
+              <span>Domínio das ferramentas</span>
+              <span>Execução autônoma</span>
+              <span>Relatórios e análises</span>
+              <span>Automação básica</span>
+              <span>Comunicação com stakeholders</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nivel-arrow-col">
+          <div class="nivel-arrow-line"></div>
+          <span class="nivel-arrow-icon">→</span>
+          <div class="nivel-arrow-line"></div>
+        </div>
+
+        <div class="nivel-col nivel-col-senior reveal">
+          <div class="nivel-col-header">
+            <span class="nivel-tag nivel-tag-gold">L3 — Sênior</span>
+            <p class="nivel-def">Resolvedor de <strong>problemas mal definidos</strong>. Não espera o problema chegar pronto — identifica, estrutura, prioriza e garante resultado.</p>
+          </div>
+          <div class="nivel-skills">
+            <p class="nivel-skills-title">People</p>
+            <div class="nivel-skill-list">
+              <span>Accountability ponta a ponta</span>
+              <span>Pensamento crítico profundo</span>
+              <span>Confrontos produtivos</span>
+              <span>Referência de excelência</span>
+              <span>Decisão por dados</span>
+            </div>
+          </div>
+          <div class="nivel-skills">
+            <p class="nivel-skills-title">Hard</p>
+            <div class="nivel-skill-list">
+              <span>Gestão de projetos</span>
+              <span>Visão sistêmica</span>
+              <span>Comunicação estratégica</span>
+              <span>Estrutura problemas complexos</span>
+              <span>Alinhamento estratégico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PDI CTA -->
+      <div class="pdi-cta reveal-fade">
+        <div class="pdi-cta-text">
+          <span class="pdi-cta-eyebrow">Próximo passo</span>
+          <h3>Crie o seu PDI com IA</h3>
+          <p>Assistente no ChatGPT com contexto do G4 e das áreas. Monta um Plano de Desenvolvimento Individual personalizado para o seu momento de carreira.</p>
+        </div>
+        <a href="https://chatgpt.com/g/g-68c9b4486888819180770ebdb274638c-mentorpdi" target="_blank" class="btn-gold magnetic pdi-btn">
+          Acessar o MentorPDI →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 10. BUDDY TIPS ── -->
+  <section class="section tips-section" id="tips">
+    <div class="container">
+      <p class="section-eyebrow reveal-fade">Do seu buddy</p>
+      <h2 class="section-headline split-text">6 coisas que eu<br>queria ter me dito.</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <span class="tip-num">01</span>
+          <p><strong>Ouça mais do que fale nos primeiros dias.</strong> Entenda como as coisas funcionam antes de sugerir mudanças.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-num">02</span>
+          <p><strong>Faz a Daily todos os dias.</strong> É onde você se torna visível e desbloqueia impedimentos rápido.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-num">03</span>
+          <p><strong>Dúvida? Pergunta sem medo.</strong> Perguntar é sinal de inteligência. O que não pode é errar a mesma coisa duas vezes — errar uma vez é aprendizado, errar de novo é descuido.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-num">04</span>
+          <p><strong>O Guilherme valoriza processo.</strong> Sempre que resolver algo, documenta. Isso conta muito aqui.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-num">05</span>
+          <p><strong>Não maquie problema.</strong> Se algo está errado, traz com dados e proposta. Isso é altamente valorizado.</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-num">06</span>
+          <p><strong>Me chama quando precisar.</strong> Sou seu buddy — pode perguntar qualquer coisa, sem julgamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="cta-final" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-content">
+      <img src="logo-g4.png" alt="G4" class="cta-logo reveal-fade" />
+      <h2 class="cta-headline split-text">Bora construir Brasil.</h2>
+      <p class="cta-sub reveal-fade">Feliz em ter você no time, Júlia. Qualquer dúvida, é só chamar.</p>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
